@@ -1,0 +1,1044 @@
+.navbar {
+  transition-duration: 0.5s;
+}
+
+.navbar.scrolled {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.navbar.addBg {
+  background-color: #202020;
+}
+
+.nav-link.sp-link.active {
+  color: var(--main-color);
+}
+
+.nav-link.sp-link.active::before,
+.nav-link.sp-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.sp-link {
+  transition: all;
+}
+
+.navbar .outNav {
+  display: flex;
+  column-gap: 20px;
+}
+
+.nav-link.sp-link {
+  color: #fff;
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.nav-link.sp-link::before,
+.nav-link.sp-link::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  color: var(--main-color);
+  background-color: var(--main-color);
+  transition-duration: 0.5s;
+}
+
+.nav-link.sp-link:hover::before,
+.nav-link.sp-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link.sp-link::before {
+  top: 90%;
+}
+
+.nav-link.sp-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  transform: translate(0, 0);
+  position: relative;
+}
+
+.navbar-toggler {
+  transition: all;
+  width: 40px;
+}
+
+.navbar .navbar-toggler span {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offcanvas {
+    transition: all;
+  }
+}
+
+.offcanvas.offcanvas-end {
+  left: 0;
+  transition-duration: 0.3s;
+  transform: translateX(-100%);
+  transition-timing-function: linear;
+  background-image: url("../delici_images/bg-7b557670.png");
+  background-color: #0e0d0c;
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(228, 197, 144, 0.5);
+}
+
+.navbar i.sideBarExit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  --bs-btn-close-color: var(--main-color);
+  cursor: pointer;
+}
+
+.offcanvas {
+  color: var(--main-color);
+}
+
+.navbar .insideNav .nav-item .nav-link {
+  border-block: 1px solid #777;
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+.navbar .insideNav .nav-item .nav-link.active {
+  color: var(--main-color);
+}
+
+.navbar .insideNav .nav-item .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .text p {
+  color: #777;
+}
+
+.navbar .booking a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .booking a::before,
+.navbar .booking a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  color: var(--main-color);
+  background-color: var(--main-color);
+  transition-duration: 0.5s;
+}
+
+.navbar .booking a:hover::before,
+.navbar .booking a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .booking a::before {
+  top: 90%;
+}
+
+.navbar .booking a:hover {
+  color: var(--main-color);
+}
+
+header .slider.active {
+  z-index: 1;
+}
+
+header .first-slider .bg-img {
+  background-image: url("../delici_images/slider-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .second-slider .bg-img {
+  background-image: url("../delici_images/slider-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .third-slider .bg-img {
+  background-image: url("../delici_images/slider-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header .slider .body .experience {
+  text-align: center;
+}
+
+header .slider .body .experience h6 {
+  letter-spacing: 2px;
+}
+
+header .slider .body .experience img {
+  width: 40%;
+}
+
+header .slider .body h2 {
+  font-size: 75px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  width: 50%;
+}
+
+header .slider .body p {
+  font-size: 20px;
+  text-align: center;
+}
+
+.moveIcons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.moveIcons span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+.moveIcons i {
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.moveIcons span.prev {
+  left: 30px;
+}
+
+.moveIcons span.next {
+  right: 30px;
+}
+
+.moveIcons span:hover {
+  background-color: var(--main-color);
+  color: #000;
+}
+
+.moveIndicators {
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+  display: flex;
+  justify-content: flex-end;
+  column-gap: 10px;
+  margin-right: 20px;
+}
+
+.moveIndicators span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.moveIndicators span.active {
+  background-color: var(--main-color);
+}
+
+.bookIcon {
+  width: 120px;
+  height: 120px;
+  padding-inline: 20px;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bookIcon img {
+  margin: 10px;
+  position: relative;
+}
+
+.bookIcon p {
+  font-size: 14px;
+}
+
+.bookIcon::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: bookTable;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+.popup {
+  background-color: rgba(228, 197, 144, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  overflow: auto;
+  padding-top: 120px;
+  display: none;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.popup.active {
+  display: flex;
+}
+
+.popup.show {
+  opacity: 1;
+}
+
+.popup .box {
+  background-color: #171819;
+  width: 600px;
+  margin: 30px auto;
+  padding: 10px 35px;
+  position: relative;
+  transform: translateY(-50%);
+  transition-duration: 1s;
+}
+
+.popup.show .box {
+  transform: translateY(0px);
+}
+
+.popup .box .head img {
+  width: 20%;
+}
+
+.popup .box .body p {
+  color: #a7a7a7;
+}
+
+.popup .box form {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+
+.popup .box form .inputGroup {
+  width: 50%;
+}
+
+.popup .box form .inputGroup .item {
+  padding-inline: 10px;
+}
+
+.popup .box form .inputGroup .item input,
+.popup .box form textarea {
+  background-color: transparent;
+  padding: 10px 15px;
+}
+
+.popup .box form textarea {
+  width: 100%;
+  resize: none;
+  height: 150px;
+}
+
+.popup .box form .inputGroup .item input::placeholder,
+.popup .box form .inputGroup .item input[type="datetime-local"],
+.popup .box form textarea::placeholder {
+  color: #a7a7a7;
+}
+
+.popup .box i {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#AboutUs {
+  background-image: url("../delici_images/bg-7b557670.png");
+  background-color: #0e0d0c;
+}
+
+#AboutUs .content .sp-card {
+  position: relative;
+  z-index: 1;
+}
+
+#AboutUs .content .sp-card:nth-of-type(1),
+#AboutUs .content .sp-card:nth-of-type(3) {
+  transform: translateY(-10%);
+}
+
+#AboutUs .content .sp-card:nth-of-type(2) {
+  margin-top: 60px;
+}
+
+#AboutUs .content .sp-card .box {
+  position: relative;
+  height: 420px;
+  overflow: hidden;
+  /* top: -25%;                  why do not work        */
+}
+
+#AboutUs .content .sp-card .box::before {
+  content: "";
+  width: 150px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotateY(0deg);
+  background-image: url("../delici_images/pattern-8.svg");
+  transition-duration: 0.5s;
+}
+
+#AboutUs .content .sp-card .box:hover::before {
+  transform: translateX(-50%) rotateY(180deg);
+}
+
+#AboutUs .content .sp-card .box::after {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: -50%;
+  width: 50%;
+  height: 200%;
+  transform: translateY(-40%) rotate(30deg);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+  /* note of item width, when set 'display flex' */
+}
+
+#AboutUs .content .sp-card .box:hover:after {
+  top: 100%;
+  left: 100%;
+  transition-duration: 1s;
+}
+
+#AboutUs .content .sp-card .item h5 {
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#AboutUs .content .sp-card .item a {
+  width: fit-content;
+  margin: auto;
+  color: var(--main-color);
+}
+
+#AboutUs .content .images img {
+  animation-name: aboutImages;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#AboutUs .content .images img.bg-1 {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#AboutUs .content .images img.bg-2 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#OurStory {
+  background-color: #171819;
+}
+
+#OurStory .experience img {
+  width: 15%;
+}
+
+#OurStory .head {
+  width: 80%;
+  margin: auto;
+}
+
+#OurStory .head h2 {
+  font-size: 50px;
+}
+
+#OurStory .head p {
+  width: 100%;
+}
+
+#OurStory .head a {
+  width: fit-content;
+  margin: auto;
+}
+
+#OurStory .body .img1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#OurStory .body .img1 img {
+  max-width: 80%;
+}
+
+#OurStory .body .img2 {
+  width: fit-content;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 280px;
+  bottom: -15%;
+  left: -10px;
+}
+
+#OurStory .body .badge {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#OurStory .body .badge img {
+  position: absolute;
+  top: -30px;
+  right: 0;
+}
+
+#OurStory .body .badge img:nth-of-type(1) {
+  animation-name: bookTable;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+}
+
+#SpecialDish {
+  background-color: #0e0d0c;
+  padding-block: 0;
+}
+
+#SpecialDish .part1 {
+  background-image: url("../delici_images/special-dish.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#SpecialDish .part2 {
+  background-image: url("../delici_images/bg-7b557670.png");
+}
+
+#SpecialDish .part2 .box {
+  width: 400px;
+  margin: auto;
+  padding-block: 80px;
+}
+
+#SpecialDish .part2 .box .experience img:nth-of-type(1) {
+  width: 20%;
+}
+
+#SpecialDish .part2 .box .experience img:nth-of-type(2) {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  animation-name: badge-2;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#SpecialDish .part2 .box h2 {
+  font-size: 50px;
+}
+
+#SpecialDish .part2 .box .price span:nth-of-type(1) {
+  color: #777;
+  margin-right: 10px;
+}
+
+#SpecialDish .part2 .box .price span:nth-of-type(2) {
+  color: var(--main-color);
+  font-size: 20px;
+}
+
+#Menu {
+  background-color: #171819;
+}
+
+#Menu .experience {
+  /* background-color: #09c; */
+  text-align: center;
+}
+
+#Menu .experience img {
+  width: 10%;
+}
+
+#Menu h2 {
+  font-size: 50px;
+}
+
+#Menu .list {
+  border-block: 1px solid #777;
+}
+
+#Menu .list ul {
+  width: fit-content;
+  margin: auto;
+  padding-block: 20px;
+}
+
+#Menu .list ul li {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#Menu .content .part .product:nth-of-type(1) {
+  transition-duration: 1s;
+  /* transform: translate(-30px, -30px); */
+}
+
+#Menu .content .part .product .image img {
+  width: 100%;
+  transition-duration: 1s;
+}
+
+#Menu .content .part .product:hover .image img {
+  transform: scale(1.2);
+}
+
+#Menu .content .part .product .popupImg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(228, 197, 144, 0.5);
+  opacity: 0;
+}
+
+#Menu .content .part .product:hover .popupImg {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+#Menu .content .part .product .popupImg i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#Menu .content .part .product:hover .popupImg i {
+  transform: rotate(360deg);
+  transition-duration: 1s;
+}
+
+#Menu .content .part.part1 {
+  border-right: 1px solid #777;
+  padding-right: 40px;
+}
+
+#Menu .content .part .title .lines {
+  row-gap: 2px;
+}
+
+#Menu .content .part .title .line {
+  height: 1px;
+  background-color: #777;
+}
+
+#Menu .content .part p {
+  color: #777;
+}
+
+#Menu .content .part.part2 {
+  border-left: 1px solid #777;
+  padding-left: 40px;
+}
+
+.menuPopup {
+  background-color: rgba(228, 197, 144, 0.5);
+  display: none;
+  opacity: 0;
+  z-index: 2000;
+  transition-duration: 1s;
+}
+
+.menuPopup.active {
+  display: block;
+}
+
+.menuPopup.show {
+  opacity: 1;
+}
+
+.menuPopup .box {
+  background-color: #171819;
+  margin: 40px auto;
+  padding: 30px;
+  width: 600px;
+}
+
+.menuPopup .box.active .menuPopup .box .experience h6 {
+  letter-spacing: 2px;
+}
+
+.menuPopup .box .experience img {
+  width: 20%;
+}
+
+.menuPopup .box h2 {
+  font-size: 40px;
+}
+
+.menuPopup .box .image {
+  background-color: aqua;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.menuPopup .box .image img {
+  width: 100%;
+}
+
+.menuPopup .box .image span.price {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: var(--main-color);
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  color: #fff;
+}
+
+.menuPopup .box p {
+  color: #a7a7a7;
+}
+
+.menuPopup .box i.exit {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.moveProduct {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.moveProduct span {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+.moveProduct i {
+  transition-duration: 0.5s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.moveProduct span.prev {
+  left: 30px;
+}
+
+.moveProduct span.next {
+  right: 30px;
+}
+
+#OurChefs {
+  background-image: url("../delici_images/bg-7b557670.png");
+  background-color: #0e0d0c;
+}
+
+#OurChefs .experience img {
+  width: 10%;
+}
+
+#OurChefs h2 {
+  font-size: 50px;
+}
+
+#OurChefs .part .image {
+  transition-duration: 1s;
+}
+
+#OurChefs .part:hover .image {
+  opacity: 0.7;
+}
+
+#OurChefs .part .image img {
+  transition-duration: 1s;
+}
+
+#OurChefs .part:hover .image img {
+  transform: rotate(2deg) scale(1.05);
+}
+
+#OurChefs .part .image .box {
+  width: 0%;
+  height: 0%;
+  background-color: #fff3;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition-duration: 0.5s;
+}
+
+#OurChefs .part:hover .image .box {
+  height: 100%;
+  width: 100%;
+}
+
+#OurChefs .part .image .box ul {
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+
+#OurChefs .part:hover .image .box ul {
+  opacity: 1;
+  transition-delay: 0.3s;
+}
+
+#OurChefs .part .image .box a {
+  text-decoration: none;
+}
+
+#OurChefs .part .image .box a i {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 0.5s;
+}
+
+#OurChefs .part .image .box a i[class*="facebook"] {
+  color: #1877f2;
+}
+
+#OurChefs .part .image .box a i[class*="twitter"] {
+  color: #fff;
+}
+
+#OurChefs .part .image .box a i[class*="instagram"] {
+  color: #e4405f;
+}
+
+#OurChefs .part .image .box a i[class*="linkedin"] {
+  color: #0a66c2;
+}
+
+#OurChefs .part .image .box a i:hover[class*="facebook"] {
+  background-color: #1877f2;
+  color: #fff;
+}
+
+#OurChefs .part .image .box a i:hover[class*="twitter"] {
+  background-color: #fff;
+  color: #000;
+}
+
+#OurChefs .part .image .box a i:hover[class*="instagram"] {
+  background-color: #e4405f;
+  color: #fff;
+}
+
+#OurChefs .part .image .box a i:hover[class*="linkedin"] {
+  background-color: #0a66c2;
+  color: #fff;
+}
+
+#OurChefs .part .text h4 {
+  font-size: 35px;
+}
+
+#OurChefs .part .text h6 {
+  letter-spacing: 3px;
+}
+
+#OurChefs .part .text p {
+  color: #a7a7a7;
+  font-size: 14px;
+}
+
+#ContactUs {
+  background-image: url(../delici_images/contact-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#ContactUs::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#ContactUs .content {
+  width: 500px;
+  margin: auto;
+  background-image: url("../delici_images/bg-7b557670.png");
+  background-color: #171819;
+  padding: 40px;
+  position: relative;
+}
+
+#ContactUs .content::before,
+#ContactUs .content::after {
+  content: "";
+  width: 15px;
+  height: 100%;
+  background-image: url("../delici_images/pattern-9.svg");
+  position: absolute;
+  top: 0;
+}
+
+#ContactUs .content::before {
+  left: 0;
+}
+
+#ContactUs .content::after {
+  right: 0;
+}
+
+#ContactUs .content img {
+  margin-bottom: 20px;
+}
+
+#ContactUs .content p {
+  color: #a7a7a7;
+}
+
+#ContactUs .content form input,
+#ContactUs .content form textarea {
+  background-color: transparent;
+  border: 1px solid #a7a7a7;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#ContactUs .content form input::placeholder,
+#ContactUs .content form textarea::placeholder {
+  color: #a7a7a7;
+}
+
+#ContactUs .content form textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  margin-top: 30px;
+}
+
+#ContactUs .content form button {
+  color: var(--main-color);
+  border: 2px solid var(--main-color);
+  margin-top: 30px;
+  padding-block: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#ContactUs .content form button::before,
+#ContactUs .content form button::after {
+  content: "";
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  left: 0;
+  background-color: var(--main-color);
+  transition-duration: .5s;
+}
+
+#ContactUs .content form button::before {
+  top: -50%;
+}
+
+#ContactUs .content form button::after {
+  bottom: -50%;
+}
+
+#ContactUs .content form button:hover::before {
+  top: 0;
+}
+#ContactUs .content form button:hover::after {
+  bottom: 0;
+}
+
+#ContactUs .content form button span {
+    transition-duration: .5s;
+}
+
+#ContactUs .content form button:hover span {
+    color: #000;
+}

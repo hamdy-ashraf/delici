@@ -1,0 +1,40 @@
+@keyframes bookTable {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+
+@keyframes navbar-toggler {
+    0% {
+        left: -30px;
+    }
+
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes aboutImages {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(30px);
+    }
+}
+
+@keyframes badge-2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(15px);
+    }
+}
