@@ -99,6 +99,10 @@ a.sp-button {
   overflow: hidden;
 }
 
+.btn:hover {
+    border-color: var(--main-color);
+}
+
 a.sp-button::before,
 a.sp-button::after {
   content: "";
