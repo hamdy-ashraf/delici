@@ -12,100 +12,1423 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/index.responsive.css" />
   </head>
-  <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar fixed-top">
-      <div class="container">
-        <a class="navbar-brand" href="#"
-          ><img src="./delici_images/logo.png" class="img-fluid" alt=""
-        /></a>
-        <ul class="list-unstyled mt-4 outNav">
-          <li class="nav-item">
-            <a class="nav-link sp-link active" aria-current="page" href="#Home"
-              >Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#AboutUs">About Us</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#OurStory">Our Story</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#SpecialDish">Special Dish</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#Menu">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#OurChefs">Our Chefs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link sp-link" href="#ContactUs">Contact Us</a>
-          </li>
-        </ul>
-        <button
-          class="navbar-toggler overflow-hidden"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-          aria-label="Toggle navigation"
-        >
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+  <body style="height: 5000px">
+    <!-- Header Page -->
+    <header class="position-relative vh-100 overflow-hidden">
+      <!-- Sliders -->
+      <div class="content">
+        <!-- First Slider -->
         <div
-          class="offcanvas offcanvas-end overflow-auto"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
+          class="slider first active vh-100 d-flex flex-column justify-content-center"
         >
-          <div class="offcanvas-header flex-column row-gap-4">
-            <div class="logoSideBar">
+          <div class="title row-gap-4">
+            <div class="head text-center">
+              <h6 class="mainColor mb-2">DELIGHTFUL EXPERIENCE</h6>
+              <img src="./delici_images/separator.svg" class="" alt="" />
+            </div>
+            <div class="body text-center text-light mt-4">
+              <h2>
+                Flavors Inspired By
+                <br />
+                The Seasons
+              </h2>
+            </div>
+            <div class="footer text-center text-light">
+              <p>Come with family & feel the joy of mouthwatering food</p>
+            </div>
+            <div class="g-btn text-center">
+              <button class="btn mainColor overflow-hidden">
+                <span>VIEW OUR MENU</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Second Slider -->
+        <div
+          class="slider second vh-100 d-flex flex-column justify-content-center"
+        >
+          <div class="title row-gap-4">
+            <div class="head text-center">
+              <h6 class="mainColor mb-2">AMAZING & DELICIOUS</h6>
+              <img src="./delici_images/separator.svg" class="" alt="" />
+            </div>
+            <div class="body text-center text-light mt-4">
+              <h2>
+                Where Every Flavor
+                <br />
+                Tells A Story
+              </h2>
+            </div>
+            <div class="footer text-center text-light">
+              <p>Come with family & feel the joy of mouthwatering food</p>
+            </div>
+            <div class="g-btn text-center">
+              <button class="btn mainColor overflow-hidden">
+                <span>VIEW OUR MENU</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Third Slider -->
+        <div
+          class="slider third vh-100 d-flex flex-column justify-content-center"
+        >
+          <div class="title row-gap-4">
+            <div class="head text-center">
+              <h6 class="mainColor mb-2">TRADATIONAL & HYGINE</h6>
+              <img src="./delici_images/separator.svg" class="" alt="" />
+            </div>
+            <div class="body text-center text-light mt-4">
+              <h2>
+                For The Love Of
+                <br />
+                Delicious Food
+              </h2>
+            </div>
+            <div class="footer text-center text-light">
+              <p>Come with family & feel the joy of mouthwatering food</p>
+            </div>
+            <div class="g-btn text-center">
+              <button class="btn mainColor overflow-hidden">
+                <span>VIEW OUR MENU</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moving Icons -->
+      <span class="movingIcon" onclick="nextSilder()"
+        ><i class="fa-solid fa-chevron-right next"></i
+      ></span>
+      <span class="movingIcon" onclick="prevSlider()"
+        ><i class="fa-solid fa-chevron-left prev"></i
+      ></span>
+
+      <!-- Indicator List -->
+      <ul class="list-unstyled d-flex column-gap-3">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+
+      <!-- Book Icon -->
+      <div class="bookIcon text-center mainBg py-2" onclick="openPopup('book')">
+        <img src="./delici_images/book-icon-1.png" alt="" />
+        <p class="mb-0 mt-2">
+          BOOK A<br />
+          TABLE
+        </p>
+      </div>
+
+      <!-- Book Popup -->
+      <div
+        class="popup overflow-auto h-100"
+        data-popup-name="book"
+        onclick="closePopup()"
+      >
+        <div class="box my-4 px-5 rounded-3 secondColor">
+          <div class="title row-gap-4">
+            <div class="head text-center">
+              <h6 class="mainColor mb-2">RESERVATION</h6>
+              <img src="./delici_images/separator.svg" class="" alt="" />
+            </div>
+            <div class="body text-center text-light my-4">
+              <h2>Book A Table</h2>
+            </div>
+            <div class="footer text-center mb-5 firstColor">
+              Restaurant will be open every day
+              <span class="mainColor">from 8:00 AM to 10:00 PM.</span>
+              <br />
+              Online reservations are available
+              <span class="mainColor">from 7:00 AM to 9:00 PM.</span> <br />
+              All booking payments are secured by credit card. No extra charges
+              <br />
+              apply to online bookings. The booking is non-refundable.
+              <br />
+              <br />
+              Booking request
+              <a class="mainColor text-decoration-none">+20-102-108-0042</a> or
+              fill out the order form
+            </div>
+            <form>
+              <div class="inputContainer">
+                <div class="input">
+                  <input
+                    type="text"
+                    placeholder="Reservation Name..."
+                    name="name"
+                  />
+                </div>
+                <div class="input">
+                  <input
+                    type="text"
+                    placeholder="Phone Number..."
+                    name="phone"
+                  />
+                </div>
+                <div class="input">
+                  <input type="number" placeholder="Seats..." name="seats" />
+                </div>
+                <div class="input">
+                  <input type="datetime-local" name="data" />
+                </div>
+                <textarea
+                  name="message"
+                  id=""
+                  class="w-100"
+                  placeholder="Notes Message..."
+                  rows="8"
+                ></textarea>
+              </div>
+
+              <div class="g-btn text-center mt-5">
+                <button class="btn mainColor overflow-hidden">
+                  <span class="position-relative z-1">Book A Table</span>
+                </button>
+              </div>
+            </form>
+          </div>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="AboutUs" class="position-relative">
+      <div class="title row-gap-4 position-relative z-1">
+        <div class="head text-center">
+          <h6 class="mainColor mb-2">FLAVORS FOR ROYALTY</h6>
+          <img src="./delici_images/separator.svg" class="" alt="" />
+        </div>
+        <div class="body text-center text-light mt-4">
+          <h2>We Offer Top Notch</h2>
+        </div>
+        <div class="footer text-center text-light mb-5">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry lorem Ipsum has been the industrys standard dummy text
+            ever.
+          </p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row row-gap-5">
+          <div class="col-lg-4 box">
+            <div class="item position-relative overflow-hidden">
+              <div
+                class="s-card position-relative d-flex justify-content-center align-items-center"
+              >
+                <div class="image position-relative">
+                  <img
+                    src="./delici_images/offer-image-1.jpg"
+                    class="d-block m-auto"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text text-center mt-3">
+              <h4 class="text-light h2">Breakfast</h4>
+              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+            </div>
+          </div>
+          <div class="col-lg-4 box">
+            <div class="item position-relative overflow-hidden">
+              <div
+                class="s-card position-relative d-flex justify-content-center align-items-center"
+              >
+                <div class="image position-relative">
+                  <img
+                    src="./delici_images/offer-image-2.jpg"
+                    class="d-block m-auto"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text text-center mt-3">
+              <h4 class="text-light h2">Dinner</h4>
+              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+            </div>
+          </div>
+          <div class="col-lg-4 box">
+            <div class="item position-relative overflow-hidden">
+              <div
+                class="s-card position-relative d-flex justify-content-center align-items-center"
+              >
+                <div class="image position-relative">
+                  <img
+                    src="./delici_images/offer-image-3.jpg"
+                    class="d-block m-auto"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="text text-center mt-3">
+              <h4 class="text-light h2">Drinks</h4>
+              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./delici_images/bg-1.png"
+        class="position-absolute top-0 end-0 offerBg"
+        alt=""
+      />
+      <img
+        src="./delici_images/bg-2.png"
+        class="position-absolute bottom-0 start-0 offerBg"
+        alt=""
+      />
+    </section>
+
+    <!-- Our Story Section -->
+    <section id="OurStory" class="secondBg">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 part1">
+            <div class="item">
+              <div class="title row-gap-4 position-relative z-1">
+                <div class="head text-center">
+                  <h6 class="mainColor mb-2">OUR STORY</h6>
+                  <img src="./delici_images/separator.svg" class="" alt="" />
+                </div>
+                <div class="body text-center text-light mt-4">
+                  <h2>
+                    Every Flavor Tells <br />
+                    A Story
+                  </h2>
+                </div>
+                <div class="footer text-center text-light">
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printingand
+                    typesetting industry lorem Ipsum has been the industrys
+                    standard dummy text ever since the when an unknown printer
+                    took a galley of type and scrambled it to make a type
+                    specimen book It has survived not only five centuries, but
+                    also the leap into.
+                  </p>
+                </div>
+                <div class="text text-center mb-4">
+                  <h6 class="fw-bold text-light h5">Book Through Call</h6>
+                  <a href="" class="mainColor text-decoration-none"
+                    >+20-102-108-0042</a
+                  >
+                </div>
+                <div class="g-btn text-center">
+                  <button class="btn mainColor overflow-hidden">
+                    <span class="position-relative z-1">Read More</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 part2">
+            <div class="item position-relative">
+              <div class="image headImg">
+                <img
+                  src="./delici_images/image-1.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="image bottomImg">
+                <img
+                  src="./delici_images/image-2.jpg"
+                  class="img-fluid"
+                  alt=""
+                />
+              </div>
+              <div class="image badges">
+                <img
+                  src="./delici_images/badge-1.png"
+                  class="img-fluid"
+                  alt=""
+                />
+                <img
+                  src="./delici_images/badge-1-bg.png"
+                  class="img-fluid rotation"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Dish Section -->
+    <section id="SpecialDish" class="py-0">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6 part1">
+            <div class="item"></div>
+          </div>
+          <div class="col-md-6 part2">
+            <div class="container">
+              <div class="title row-gap-4 position-relative z-1">
+                <div class="row content">
+                  <div class="col-1">
+                    <div class="item">
+                      <img
+                        src="./delici_images/badge-2.png"
+                        class="dishBadge"
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                  <div class="col-10">
+                    <div class="item">
+                      <div class="head">
+                        <h6 class="mainColor mb-2">SPECIAL DISH</h6>
+                        <img
+                          src="./delici_images/separator.svg"
+                          class="separator"
+                          alt=""
+                        />
+                      </div>
+                      <div class="body text-light mt-4">
+                        <h2>Lobster Tortellini</h2>
+                      </div>
+                      <div class="footer text-light">
+                        <p class="mb-4 lh-lg">
+                          Lorem Ipsum is simply dummy text of the printingand
+                          typesetting industry lorem Ipsum has been the
+                          industrys standard dummy text ever since the when an
+                          unknown printer took a galley of type.
+                        </p>
+                      </div>
+                      <div class="price mb-4">
+                        <span class="firstColor text-decoration-line-through"
+                          >$40.00</span
+                        >
+                        <span class="mainColor">$20.00</span>
+                      </div>
+                      <div class="g-btn">
+                        <button class="btn mainColor overflow-hidden">
+                          <span class="position-relative z-1"
+                            >VIEW All MENU</span
+                          >
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="Menu" class="secondBg">
+      <div class="container">
+        <div class="title row-gap-4">
+          <div class="head text-center">
+            <h6 class="mainColor mb-2">SPECIAL SELECTION</h6>
+            <img src="./delici_images/separator.svg" class="" alt="" />
+          </div>
+          <div class="body text-center text-light mt-4">
+            <h2 class="mb-4">Delicious Menu</h2>
+          </div>
+        </div>
+        <div class="navBar mb-5">
+          <ul class="list-unstyled d-flex column-gap-4">
+            <li>
+              <a href="#" class="active" data-dish-name="breakFast"
+                >BreakFast</a
+              >
+            </li>
+            <div class="minBox">
+              <span></span>
+            </div>
+            <li><a href="#" data-dish-name="lunch">Lunch</a></li>
+            <div class="minBox">
+              <span></span>
+            </div>
+            <li><a href="#" data-dish-name="dinner">Dinner</a></li>
+            <div class="minBox">
+              <span></span>
+            </div>
+            <li><a href="#" data-dish-name="drinks">Drinks</a></li>
+          </ul>
+        </div>
+        <div class="dishes">
+          <div class="row dishContent active show" data-dish-name="breakFast">
+            <div class="col-lg-6 part1">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 part2">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row dishContent" data-dish-name="lunch">
+            <div class="col-lg-6 part1">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 part2">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row dishContent" data-dish-name="dinner">
+            <div class="col-lg-6 part1">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 part2">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row dishContent" data-dish-name="drinks">
+            <div class="col-lg-6 part1">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-9 d-flex flex-column justify-content-center">
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6 part2">
+              <div class="item d-flex flex-column row-gap-5">
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row px-4 dishItem">
+                  <div class="col-3">
+                    <div class="item">
+                      <div class="dishImg">
+                        <img
+                          src="./delici_images/BF-1.webp"
+                          class="img-fluid"
+                          alt=""
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="col-9 d-flex flex-column justify-content-center"
+                  >
+                    <div class="item">
+                      <div class="name d-flex column-gap-lg-3 mb-3">
+                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
+                        <div
+                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                        >
+                          <span class="line"></span>
+                          <span class="line"></span>
+                        </div>
+                        <span class="price mainColor">$35.92</span>
+                      </div>
+                      <p class="details firstColor">
+                        Fluffy buttermilk pancakes stacked high and griddled to
+                        a perfect...
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Chefs Section -->
+    <section id="OurChefs">
+      <div class="container">
+        <div class="title row-gap-4">
+          <div class="head text-center">
+            <h6 class="mainColor mb-2">EXPERIENCED TEAM</h6>
+            <img src="./delici_images/separator.svg" class="" alt="" />
+          </div>
+          <div class="body text-center text-light mt-4">
+            <h2 class="mb-4">Meet Our Chef</h2>
+          </div>
+        </div>
+        <div class="row content">
+          <div class="col-md-4">
+            <div class="item box">
+              <div class="s-card rounded-2 overflow-hidden position-relative">
+                <img
+                  src="./delici_images/chef-1.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <div class="media position-absolute z-1 top-50 start-50">
+                  <ul class="list-unstyled d-flex column-gap-3">
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-x-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text mt-4">
+                <h4 class="mb-0 h2 text-light">Willium Joe</h4>
+                <span class="mainColor d-block my-2 fw-bold">MASTER CHEF</span>
+                <p class="firstColor">
+                  Passionate chef designs elegant dishes using quality
+                  ingredients, balanced flavors, and classic methods for every
+                  occasion.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item box">
+              <div class="s-card rounded-2 overflow-hidden position-relative">
+                <img
+                  src="./delici_images/chef-2.jpg"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <div class="media position-absolute z-1 top-50 start-50">
+                  <ul class="list-unstyled d-flex column-gap-3">
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-x-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text mt-4">
+                <h4 class="mb-0 h2 text-light">Steave Den</h4>
+                <span class="mainColor d-block my-2 fw-bold">MASTER CHEF</span>
+                <p class="firstColor">
+                  Talented chef prepares delicious meals using fresh produce,
+                  bold flavors, and modern techniques for every occasion.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="item box">
+              <div class="s-card rounded-2 overflow-hidden position-relative">
+                <img
+                  src="./delici_images/chef-3.png"
+                  class="img-fluid w-100"
+                  alt=""
+                />
+                <div class="media position-absolute z-1 top-50 start-50">
+                  <ul class="list-unstyled d-flex column-gap-3">
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-facebook-f"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-x-twitter"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-instagram"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="#" class="">
+                        <i class="fa-brands fa-linkedin-in"></i
+                      ></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text mt-4">
+                <h4 class="mb-0 h2 text-light">Oliver Joe</h4>
+                <span class="mainColor d-block my-2 fw-bold">MASTER CHEF</span>
+                <p class="firstColor">
+                  Inspired by classic cuisine and modern techniques, creating
+                  memorable dishes that combine beautiful presentation with
+                  taste.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="ContactUs">
+      <div class="container">
+        <div class="content secondBg py-5">
+          <div class="head text-center">
+            <div class="logo mb-4">
               <img src="./delici_images/logo.png" class="img-fluid" alt="" />
             </div>
-            <div class="imgSideBar rounded-circle overflow-hidden">
-              <img
-                src="./delici_images/sidebar-image.jpg"
-                class="img-fluid"
-                alt=""
-              />
-            </div>
-            <i
-              class="fa-regular fa-circle-xmark sideBarExit"
-              data-bs-dismiss="offcanvas"
-            ></i>
-            <ul
-              class="navbar-nav justify-content-end flex-grow-1 pe-3 insideNav w-50 m-auto"
-            >
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#Home"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#AboutUs">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#OurStory">Our Story</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#SpecialDish">Special Dish</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Menu">Menu</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#OurChefs">Our Chefs</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#ContactUs">Contact Us</a>
-              </li>
-            </ul>
-            <div class="text text-center mt-4">
-              <h3>Visit Us</h3>
+            <div class="location">
               <p>
                 <i class="fa-solid fa-location-dot"></i> Delicious City, London
                 9578, UK
@@ -117,598 +1440,41 @@
                 <i class="fa-regular fa-envelope"></i> booking@restaurant.com
               </p>
             </div>
-            <span class="miniBox"></span>
-            <div class="booking text-center d-flex flex-column row-gap-3">
-              <h6>Booking Request</h6>
-              <a href="" class="fs-3 mb-4">+20-102-108-0042</a>
+            <div class="minBox d-flex column-gap-3 my-4">
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
+          </div>
+          <div class="reservation">
+            <form>
+              <div class="inputGroup d-flex flex-md-row flex-column">
+                <div class="item">
+                  <input type="text" name="name" placeholder="Name..." />
+                </div>
+                <div class="item">
+                  <input type="email" name="email" placeholder="Email..." />
+                </div>
+              </div>
+              <textarea
+                name="message"
+                placeholder="Message..."
+                rows="5"
+              ></textarea>
+              <div class="title mt-4">
+                <button class="btn mainColor w-100 overflow-hidden">
+                  <span class="position-relative z-1">Send Message</span>
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </nav>
-
-    <!-- Header Page -->
-    <header id="Home" class="position-relative vh-100">
-      <div
-        class="first-slider slider active position-absolute top-0 start-0 w-100 h-100 vh-100"
-        data-index="0"
-      >
-        <div class="bg-img h-100"></div>
-        <div
-          class="body position-absolute top-0 start-0 text-light d-flex flex-column justify-content-center align-items-center w-100 h-100"
-        >
-          <div class="experience mb-4 mainColor">
-            <h6>DELIGHTFUL EXPERIENCE</h6>
-            <img src="./delici_images/separator.svg" alt="" />
-          </div>
-          <h2>Flavors Inspired By The Seasons</h2>
-          <p>Come with family & feel the joy of mouthwatering food</p>
-          <a href="#" class="sp-button btn rounded-2 mainColor"
-            ><span>VIEW OUR MENU</span></a
-          >
-        </div>
-      </div>
-      <div
-        class="second-slider slider position-absolute top-0 start-0 vh-100 position-relative w-100"
-        data-index="1"
-      >
-        <div class="bg-img h-100"></div>
-        <div
-          class="body position-absolute top-0 start-0 text-light d-flex flex-column justify-content-center align-items-center w-100 h-100"
-        >
-          <div class="experience mb-4 mainColor">
-            <h6>AMAZING & DELICIOUS</h6>
-            <img src="./delici_images/separator.svg" alt="" />
-          </div>
-          <h2>Where Every Flavor Tells A Story</h2>
-          <p>Come with family & feel the joy of mouthwatering food</p>
-          <a href="#" class="sp-button btn rounded-2 mainColor"
-            ><span>VIEW OUR MENU</span></a
-          >
-        </div>
-      </div>
-      <div
-        class="third-slider slider position-absolute top-0 start-0 w-100 vh-100 position-absolute"
-        data-index="2"
-      >
-        <div class="bg-img h-100"></div>
-        <div
-          class="body position-absolute top-0 start-0 text-light d-flex flex-column justify-content-center align-items-center w-100 h-100"
-        >
-          <div class="experience mb-4 mainColor">
-            <h6>TRADATIONAL & HYGINE</h6>
-            <img src="./delici_images/separator.svg" alt="" />
-          </div>
-          <h2>For The Love Of Delicious Food</h2>
-          <p>Come with family & feel the joy of mouthwatering food</p>
-          <a href="#" class="sp-button btn rounded-2 mainColor"
-            ><span>VIEW OUR MENU</span></a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- Move Icons -->
-    <div class="moveIcons mainColor z-2">
-      <span
-        class="prev"
-        onclick="
-          moveActiveByIcon('prev', 'third', 'prevSlider', '2', 'prevIndicator')
-        "
-        ><i class="fa-solid fa-chevron-left prev"></i
-      ></span>
-      <span
-        class="next"
-        onclick="
-          moveActiveByIcon('next', 'first', 'nextSlider', '0', 'nextIndicator')
-        "
-        ><i class="fa-solid fa-chevron-right next"></i
-      ></span>
-    </div>
-
-    <!-- Move Indicators -->
-    <div class="moveIndicators z-2">
-      <span class="active" data-index="0"></span>
-      <span data-index="1"></span>
-      <span data-index="2"></span>
-    </div>
-
-    <!-- Book a Table -->
-    <div
-      class="bookIcon mainBgColor text-center z-2"
-      onclick="openPopup(popupTable)"
-    >
-      <img
-        src="./delici_images/book-icon-1.png"
-        class="mainBgColor img-fluid"
-        alt=""
-      />
-      <p>BOOK A TABLE</p>
-    </div>
-
-    <!-- Form Popup -->
-    <div class="popup" data-popup-name="form">
-      <div class="box rounded-3 py-5">
-        <div class="head mainColor text-center">
-          <h6>AMAZING & DELICIOUS</h6>
-          <img src="./delici_images/separator.svg" alt="" />
-        </div>
-
-        <div class="body text-light text-center">
-          <h2 class="my-3">Book A Table</h2>
-          <p>
-            Restaurant will be open for all days, Sunday night will be closed,
-            All booking payment is secured with credit card, no charges will be
-            aplly for online booking. no refundable.
-          </p>
-          <p>
-            Booking request <span class="mainColor">+20-102-108-0042</span> or
-            fill out the order form
-          </p>
-        </div>
-        <form>
-          <div class="inputGroup">
-            <div class="item">
-              <input
-                type="text"
-                placeholder="Reservation Name..."
-                name="reservation"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="inputGroup">
-            <div class="item">
-              <input
-                type="text"
-                placeholder="Phone Number"
-                name="phone"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="inputGroup">
-            <div class="item">
-              <input
-                type="number"
-                placeholder="Seats"
-                name="seats"
-                class="form-control"
-              />
-            </div>
-          </div>
-          <div class="inputGroup">
-            <div class="item">
-              <input type="datetime-local" name="data" class="form-control" />
-            </div>
-          </div>
-          <textarea
-            name="message"
-            placeholder="Notes Messages..."
-            class="form-control"
-          ></textarea>
-          <button class="btn mainBtn rounded-2 mt-4 mainColor m-auto">
-            <span>BOOK A TABLE</span>
-          </button>
-        </form>
-        <i
-          class="fa-regular fa-circle-xmark exit mainColor"
-          onclick="closePopup(popupTable)"
-        ></i>
-      </div>
-    </div>
-
-    <!-- About Section -->
-    <section id="AboutUs" class="position-relative overflow-hidden">
-      <div class="container">
-        <div class="head text-center position-relative z-1">
-          <div class="experience mb-3 mainColor">
-            <h6>FLAVORS FOR ROYALTY</h6>
-            <img src="./delici_images/separator.svg" class="img-fluid" alt="" />
-          </div>
-          <h2 class="text-light mb-3">We Offer Top Notch</h2>
-          <p class="text-light m-auto">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry lorem Ipsum has been the industrys standard dummy text
-            ever.
-          </p>
-        </div>
-        <div class="content">
-          <div class="row">
-            <div class="col-lg-4 sp-card">
-              <div class="item">
-                <div
-                  class="box d-flex justify-content-center align-items-center"
-                >
-                  <img
-                    src="./delici_images/offer-image-1.jpg"
-                    class="img-fluid m-auto d-block position-relative"
-                    alt=""
-                  />
-                </div>
-                <h5>Breakfast</h5>
-                <a class="nav-link sp-link" href="#Menu">VIEW MENU</a>
-              </div>
-            </div>
-            <div class="col-lg-4 sp-card">
-              <div class="item">
-                <div
-                  class="box d-flex justify-content-center align-items-center"
-                >
-                  <img
-                    src="./delici_images/offer-image-2.jpg"
-                    class="img-fluid m-auto d-block position-relative"
-                    alt=""
-                  />
-                </div>
-                <h5>Appetizers</h5>
-                <a class="nav-link sp-link" href="#Menu">VIEW MENU</a>
-              </div>
-            </div>
-            <div class="col-lg-4 sp-card">
-              <div class="item">
-                <div
-                  class="box d-flex justify-content-center align-items-center"
-                >
-                  <img
-                    src="./delici_images/offer-image-3.jpg"
-                    class="img-fluid m-auto d-block position-relative"
-                    alt=""
-                  />
-                </div>
-                <h5>Drinks</h5>
-                <a class="nav-link sp-link" href="#Menu">VIEW MENU</a>
-              </div>
-            </div>
-          </div>
-          <div class="images">
-            <img src="./delici_images/bg-1.png" class="img-fluid bg-1" alt="" />
-            <img src="./delici_images/bg-2.png" class="img-fluid bg-2" alt="" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Story Section -->
-    <section id="OurStory">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 part1">
-            <div class="item">
-              <div class="head text-center position-relative z-1">
-                <div class="experience mb-3 mainColor">
-                  <h6>OUR STORY</h6>
-                  <img
-                    src="./delici_images/separator.svg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-                <h2 class="text-light mb-3">Every Flavor Tells A Story</h2>
-                <p class="text-light m-auto">
-                  Lorem Ipsum is simply dummy text of the printingand
-                  typesetting industry lorem Ipsum has been the industrys
-                  standard dummy text ever since the when an unknown printer
-                  took a galley of type and scrambled it to make a type specimen
-                  book It has survived not only five centuries, but also the
-                  leap into.
-                </p>
-                <p class="fw-bolder text-light mt-3 mb-0">Book Through Call</p>
-                <a class="nav-link sp-link fs-4" href="#Menu"
-                  >+20-102-108-0042</a
-                >
-                <a href="#" class="sp-button btn rounded-2 mt-4 mainColor"
-                  ><span>Read More</span></a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 part2">
-            <div class="item">
-              <div class="body position-relative">
-                <div class="img1">
-                  <img
-                    src="./delici_images/image-1.jpg"
-                    class="img-fluid"
-                    alt=""
-                  />
-                </div>
-
-                <div class="badge">
-                  <img src="./delici_images/badge-1-bg.png" />
-                  <img src="./delici_images/badge-1.png" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Special Dish Section -->
-    <section id="SpecialDish">
-      <div class="container-fluid">
-        <div class="content">
-          <div class="row">
-            <div class="col-md-6 part1">
-              <div class="item"></div>
-            </div>
-            <div class="col-md-6 part2">
-              <div class="item">
-                <div class="box">
-                  <div class="experience mb-3 mainColor position-relative">
-                    <h6>SPECIAL DISH</h6>
-                    <img
-                      src="./delici_images/separator.svg"
-                      class="img-fluid"
-                      alt=""
-                    />
-                    <img
-                      src="./delici_images/badge-2.png"
-                      class="img-fluid"
-                      alt=""
-                    />
-                  </div>
-                  <h2 class="text-light mb-3">Lobster Tortellini</h2>
-                  <p class="text-light m-auto">
-                    Lorem Ipsum is simply dummy text of the printingand
-                    typesetting industry lorem Ipsum has been the industrys
-                    standard dummy text ever since the when an unknown printer
-                    took a galley of type.
-                  </p>
-                  <div class="price mt-3">
-                    <span class="text-decoration-line-through">$40.00</span>
-                    <span>$20.00</span>
-                  </div>
-                  <a href="#" class="sp-button btn rounded-2 mt-4 mainColor"
-                    ><span>VIEW ALL MENU</span></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Menu Section -->
-    <section id="Menu">
-      <div class="container">
-        <div class="experience mb-3 mainColor position-relative">
-          <h6>SPECIAL SELECTION</h6>
-          <img src="./delici_images/separator.svg" class="img-fluid" alt="" />
-        </div>
-        <h2 class="text-light text-center mb-3">Delicious Menu</h2>
-        <div class="list table-responsive">
-          <ul class="list-unstyled d-flex column-gap-4">
-            <li>
-              <a class="nav-link sp-link" onclick="selectSection('BreakFast')"
-                >BreakFast</a
-              >
-            </li>
-            <div class="boxRotete d-flex align-items-center">
-              <span class="miniBox"></span>
-            </div>
-            <li>
-              <a class="nav-link sp-link" onclick="selectSection('Lunch')"
-                >Lunch</a
-              >
-            </li>
-            <div class="boxRotete d-flex align-items-center">
-              <span class="miniBox"></span>
-            </div>
-            <li>
-              <a class="nav-link sp-link" onclick="selectSection('Dinner')"
-                >Dinner</a
-              >
-            </li>
-            <div class="boxRotete d-flex align-items-center">
-              <span class="miniBox"></span>
-            </div>
-            <li>
-              <a class="nav-link sp-link" onclick="selectSection('Drinks')"
-                >Drinks</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="content mt-5">
-          <div class="row">
-            <div
-              class="col-md-6 part part1 d-flex flex-column row-gap-4 active"
-            >
-              <div class="item">
-                <div class="row row-gap-4"></div>
-              </div>
-            </div>
-            <div class="col-md-6 part part2 d-flex flex-column row-gap-4">
-              <div class="item">
-                <div class="row row-gap-4"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Menu Popup -->
-    <div
-      class="menuPopup position-fixed top-0 start-0 w-100 h-100 overflow-auto"
-      data-
-    >
-      <div class="box product rounded-3 position-relative"></div>
-    </div>
-
-    <!-- Our Chefs Section -->
-    <section id="OurChefs">
-      <div class="container">
-        <div class="experience mb-3 mainColor text-center">
-          <h6>EXPERIENCED TEAM</h6>
-          <img src="./delici_images/separator.svg" class="img-fluid" alt="" />
-        </div>
-        <h2 class="text-light text-center mb-4">Meet Our Chef</h2>
-        <div class="content">
-          <div class="row">
-            <div class="col-md-4 part">
-              <div class="item">
-                <div class="image rounded-3 overflow-hidden position-relative">
-                  <img src="./delici_images/chef-1.jpg" class="w-100" alt="" />
-                  <div
-                    class="box d-flex justify-content-center align-items-center"
-                  >
-                    <ul class="list-unstyled d-flex column-gap-3">
-                      <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="text mt-3">
-                  <h4 class="text-light">Willium Joe</h4>
-                  <h6 class="mainColor fw-bolder">MASTER CHEF</h6>
-                  <p>
-                    Lorem Ipsum is simply dummy printing and typeset industry
-                    lorem Ipsum has been the industrys.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 part">
-              <div class="item">
-                <div class="image rounded-3 overflow-hidden position-relative">
-                  <img src="./delici_images/chef-2.jpg" class="w-100" alt="" />
-                  <div
-                    class="box d-flex justify-content-center align-items-center"
-                  >
-                    <ul class="list-unstyled d-flex column-gap-3">
-                      <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="text mt-3">
-                  <h4 class="text-light">Steave Den</h4>
-                  <h6 class="mainColor fw-bolder">MASTER CHEF</h6>
-                  <p>
-                    Lorem Ipsum is simply dummy printing and typeset industry
-                    lorem Ipsum has been the industrys.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4 part">
-              <div class="item">
-                <div class="image rounded-3 overflow-hidden position-relative">
-                  <img src="./delici_images/chef-3.png" class="w-100" alt="" />
-                  <div
-                    class="box d-flex justify-content-center align-items-center"
-                  >
-                    <ul class="list-unstyled d-flex column-gap-3">
-                      <li>
-                        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                      </li>
-                      <li>
-                        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="text mt-3">
-                  <h4 class="text-light">Oliver Joe</h4>
-                  <h6 class="mainColor fw-bolder">MASTER CHEF</h6>
-                  <p>
-                    Lorem Ipsum is simply dummy printing and typeset industry
-                    lorem Ipsum has been the industrys.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Us Section -->
-    <section id="ContactUs">
-      <div class="container position-relative z">
-        <div class="content">
-          <div class="body text-center">
-            <img src="./delici_images/logo.png" alt="" />
-            <p>
-              <i class="fa-solid fa-location-dot"></i> Delicious City, London
-              9578, UK
-            </p>
-            <p>
-              <i class="fa-regular fa-clock"></i> Daily : 8.00 am to 10.00 pm
-            </p>
-            <p><i class="fa-regular fa-envelope"></i> booking@restaurant.com</p>
-            <div
-              class="minBoxes d-flex column-gap-3 justify-content-center my-4"
-            >
-              <div class="miniBox"></div>
-              <div class="miniBox"></div>
-              <div class="miniBox"></div>
-            </div>
-          </div>
-          <form>
-            <div class="row justify-content-between row-gap-4">
-              <div class="col-md-6">
-                <div class="inputGroup text-center">
-                  <input
-                    type="text"
-                    placeholder="Name..."
-                    name="name"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="inputGroup text-center">
-                  <input
-                    type="email"
-                    placeholder="Email..."
-                    name="email"
-                    required
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="input-group">
-              <textarea name="message" placeholder="Message..."></textarea>
-            </div>
-            <button class="btn w-100">
-              <span class="position-relative z-1">Send Message</span>
-            </button>
-          </form>
-        </div>
-      </div>
-      <footer class="mt-5 text-center position-relative text-light">
-        <p>&copy; 2026 Restaurant. All Rights Reserved | Created by <span class="mainColor">Hamdy Ashraf</span></p>
+      <footer>
+        <p class="text-light pt-5 text-center mb-0 position-relative">
+          &copy; 2026 Restaurant. All Rights Reserved | Created by
+          <span class="mainColor">Hamdy Ashraf</span>
+        </p>
       </footer>
     </section>
 

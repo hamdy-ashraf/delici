@@ -1,242 +1,212 @@
 @media (max-width: 1300px) {
-  .navbar .navbar-brand img {
-    width: 75%;
-  }
-
-  .offcanvas.offcanvas-end {
-    width: 85%;
-  }
-
-  .navbar .outNav {
-    display: none;
-  }
-
-  .navbar .navSideBar {
-    width: 70%;
-  }
-
-  header .slider .body h2 {
-    font-size: 34px;
-    width: 100%;
-  }
-
-  header .slider .body p {
-    font-size: 12px;
-  }
-
-  a.sp-button {
-    padding: 5px 10px;
-    margin-top: 10px;
-  }
-
-  a.sp-button span {
-    font-size: 12px;
-  }
-
-  .moveIcons i {
-    font-size: 10px;
-  }
-
-  .moveIcons span {
-    display: none;
-  }
-
-  .moveIcons span.prev {
-    left: 20px;
-  }
-
-  .moveIcons span.next {
-    right: 20px;
-  }
-
-  .bookIcon {
-    width: 85px;
-    height: 85px;
-    padding-inline: 0px;
-    bottom: 30px;
-    left: 30px;
-  }
-
-  .bookIcon img {
-    width: 35%;
-  }
-
-  .bookIcon p {
-    font-size: 10px;
-    padding-inline: 10px;
-  }
-
-  .head img {
-    width: 30%;
-  }
-
-  .head h2 {
-    font-size: 30px;
-  }
-
-  .head p {
-    width: 85%;
-    padding: 5px;
-  }
-
-  #AboutUs .content .sp-card:nth-of-type(1),
-  #AboutUs .content .sp-card:nth-of-type(3) {
-    transform: translateY(0%);
-  }
-
-  #AboutUs .content .sp-card:nth-of-type(2) {
-    margin-top: 0px;
-  }
-
-  #AboutUs .content .sp-card:not(:last-child),
-  #AboutUs .head {
-    margin-bottom: 50px;
-  }
-
-  #OurStory .head h2 {
-    font-size: 35px;
-  }
-
-  #OurStory .head p {
-    /* width: 100%; */
+  .title .head h6 {
     font-size: 14px;
   }
 
+  .title .head img {
+    width: 30%;
+  }
+
+  .title .body h2 {
+    font-size: 30px;
+  }
+
+  .title .footer p {
+    font-size: 11px;
+    margin-bottom: 15px;
+  }
+
+  .title button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  header span.movingIcon {
+    display: none;
+  }
+
+  header .bookIcon {
+    bottom: 25px;
+    left: 30px;
+    padding-inline: 20px;
+  }
+
+  header .bookIcon img {
+    width: 50%;
+  }
+
+  #AboutUs .title h2,
+  #AboutUs .title p {
+    width: 80%;
+  }
+
+  #AboutUs .title h2 {
+    font-size: 30px;
+  }
+
+  #AboutUs .title p {
+    font-size: 16px;
+  }
+
+  #AboutUs .box:nth-of-type(1),
+  #AboutUs .box:nth-of-type(2),
+  #AboutUs .box:nth-of-type(3) {
+    transform: translateY(0px);
+  }
+
+  #OurStory .title img {
+    width: 30%;
+  }
+
+  #OurStory .title h2 {
+    font-size: 30px;
+  }
+
+  #OurStory .title p {
+    font-size: 14px;
+    padding-inline: 0px;
+  }
+
   #OurStory .part2 {
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
-  #OurStory .body {
-    width: 280px;
-    margin: auto;
+  #OurStory .part2 .image.bottomImg {
+    top: 55%;
+    left: -60px;
   }
 
-  #OurStory .body .img2 {
-    width: 60%;
+  #OurStory .part2 .image.bottomImg img {
+    width: 50%;
+  }
+
+  #SpecialDish .content {
+    column-gap: 20px;
   }
 
   #SpecialDish .part1 {
     height: 50vh;
   }
 
-  #SpecialDish .part2 .box {
-    width: 220px;
+  #SpecialDish .part2 {
+    padding: 50px 0px;
+  }
+
+  #SpecialDish .part2 .title h2 {
+    font-size: 30px;
+  }
+
+  #SpecialDish .part2 .title p {
+    font-size: 12px;
+    width: 100%;
+  }
+
+  #OurChefs .title h2 {
+    font-size: 30px;
+  }
+
+  #OurChefs .content {
+    row-gap: 30px;
+  }
+
+  #OurChefs .box {
+    width: 280px;
     margin: auto;
-    padding-block: 80px;
-    line-height: 30px;
   }
 
-  #SpecialDish .part2 .box h2 {
-    font-size: 28px;
-  }
-
-  #SpecialDish .part2 .box p {
+  #OurChefs .text span {
     font-size: 14px;
   }
 
-  #Menu .experience img {
-    width: 30%;
-  }
-
-  #Menu .content .part.part1 {
-    border-right: none;
-    padding-right: 10px;
-  }
-
-  #Menu .content .part.part2 {
-    border-left: none;
-    padding-left: 10px;
-  }
-
-  .menuPopup .box {
-    width: 90%;
-  }
-
-  .moveProduct span {
-    width: 30px;
-    height: 30px;
-  }
-
-  #OurChefs .experience img {
-    width: 30%;
-  }
-
-  #OurChefs h2 {
-    font-size: 30px;
-  }
-
-  #OurChefs .part {
-    width: 300px;
-    margin: auto;
-  }
-
-  #OurChefs .part:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
-  #OurChefs .part .text h4 {
-    font-size: 30px;
-  }
-
-  #OurChefs .part .text h6 {
-    font-size: 16px;
-  }
-
   #ContactUs .content {
-    width: 300px;
+    width: 85%;
   }
 
-  #ContactUs .content p {
-    font-size: 13px;
-}
+  #ContactUs .content .location p {
+    font-size: 12px;
+  }
 
-  #ContactUs .content input {
+  #ContactUs .content form {
+    padding-inline: 10px;
+  }
+
+  #ContactUs .content form .inputGroup .item:nth-of-type(1) {
+    padding-right: 0px;
+    margin-bottom: 35px;
+  }
+  #ContactUs .content form .inputGroup .item:nth-of-type(2) {
+    padding-left: 0px;
+  }
+
+  #ContactUs .content form input,
+  #ContactUs .content form textarea {
     width: 100%;
   }
 }
 
 @media (min-width: 371px) and (max-width: 1300px) {
-  .offcanvas.offcanvas-end {
-    width: 75%;
+  .title .head img {
+    width: 20%;
   }
 
-  header .slider .body h2 {
-    font-size: 50px;
+  #OurStory .title img {
+    width: 20%;
+  }
+
+  #OurStory .part2 .headImg img {
     width: 70%;
+    margin: auto;
+    display: block;
   }
 
-  header .slider .body p {
-    font-size: 16px;
+  #OurStory .part2 .image.bottomImg {
+    top: 60%;
+    left: -40px;
   }
 
-  a.sp-button {
-    padding: 10px 20px;
-    margin-top: 10px;
+  #OurStory .part2 .image.bottomImg::before {
+    max-width: 70px;
   }
 
-  a.sp-button span {
-    font-size: 16px;
-  }
-
-  #SpecialDish .part2 .box {
-    width: 300px;
+  #SpecialDish .content {
+    padding-inline: 20px;
   }
 }
 
 @media (min-width: 577px) and (max-width: 1300px) {
-  .offcanvas.offcanvas-end {
-    width: 50%;
+  .title .head h6 {
+    font-size: 16px;
   }
 
-  .head img {
-    width: 20%;
+  .title .body h2 {
+    font-size: 50px;
   }
 
-  .head h2 {
+  .title .footer p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  .title button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  #AboutUs .title h2,
+  #AboutUs .title p {
+    width: 70%;
+  }
+
+  #OurStory .title h2 {
     font-size: 40px;
   }
 
-  .head p {
+  #OurStory .part2 .image.bottomImg {
+    top: 65%;
+    left: -30px;
+  }
+
+  #OurStory .part2 .image.badges img {
     width: 75%;
   }
 
@@ -244,141 +214,158 @@
     height: 80vh;
   }
 
-  #SpecialDish .part2 .box {
-    width: 400px;
+  #SpecialDish .part2 .title img.separator {
+    width: 20%;
   }
 
-  .menuPopup .box {
-    width: 70%;
-  }
-  .moveProduct span {
-    width: 40px;
-    height: 40px;
+  #SpecialDish .part2 .title h2 {
+    font-size: 40px;
   }
 
-  #ContactUs .content {
-    width: 500px;
+  #SpecialDish .part2 .title p {
+    font-size: 14px;
+    width: 85%;
   }
 
-  #ContactUs .content p {
-    font-size: initial;
-}
+  #SpecialDish .content {
+    padding-inline: 0;
+  }
+
+  #OurChefs .title h2 {
+    font-size: 40px;
+  }
+
+  #OurChefs .box {
+    width: 350px;
+  }
+
+  #ContactUs .content .location p {
+    font-size: 14px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1300px) {
-  header .slider .body h2 {
-    font-size: 70px;
-    width: 70%;
-  }
-
-  header .slider .body p {
-    font-size: 18px;
-  }
-
-  .head img {
+  .title .head img {
     width: 15%;
   }
 
-  .head p {
-    width: 70%;
+  .title .body h2 {
+    font-size: 60px;
   }
 
-  #OurStory .head h2 {
-    font-size: 35px;
+  #AboutUs .title h2 {
+    font-size: 40px;
   }
 
-  #OurStory .head p {
-    width: 100%;
-    font-size: initial;
+  #OurStory .part2 .headImg img {
+    width: 90%;
   }
 
-  #OurStory .part2 {
-    margin-top: 0px;
+  #OurStory .part2 .image.bottomImg {
+    top: 65%;
+    left: -80px;
   }
 
-  #OurStory .body {
-    width: initial;
-    margin: initial;
-  }
-
-  #OurStory .body .img2 {
+  #OurStory .part2 .image.badges img {
     width: 100%;
   }
 
   #SpecialDish .part1 {
-    height: 100vh;
+    height: initial;
   }
 
-  #SpecialDish .part2 .box {
-    width: 280px;
+  #SpecialDish .content {
+    padding-inline: 20px;
   }
 
-  #SpecialDish .part2 .box {
-    width: 350px;
+  #OurChefs .box {
+    width: initial;
+    padding-inline: 0;
   }
 
-  #SpecialDish .part2 .box h2 {
-    font-size: 50px;
+  #OurChefs .text h4 {
+    font-size: 22px;
   }
 
-  #SpecialDish .part2 .box p {
-    font-size: initial;
+  #OurChefs .text span {
+    font-size: 12px;
   }
 
-  #Menu .content .part.part1 {
-    border-right: 1px solid #777;
-    padding-right: 40px;
+  #ContactUs .content form .inputGroup {
+    margin-bottom: 0;
   }
 
-  #Menu .content .part.part2 {
-    border-left: 1px solid #777;
-    padding-left: 40px;
+  #ContactUs .content form .inputGroup .item:nth-of-type(1) {
+    padding-right: 10px;
+    margin-bottom: 35px;
   }
-
-  .menuPopup .box {
-    width: 60%;
+  #ContactUs .content form .inputGroup .item:nth-of-type(2) {
+    padding-left: 10px;
   }
-
-  /* #OurChefs .part {
-    width: 200px;
-  } */
 }
 
 @media (min-width: 992px) and (max-width: 1300px) {
-  .offcanvas.offcanvas-end {
-    width: 40%;
-  }
-
-  header .slider .body h2 {
-    width: 60%;
-  }
-
-  .head img {
+  .title .head img {
     width: 10%;
   }
 
-  .head p {
+  .title .body h2 {
+    font-size: 70px;
+  }
+
+  .title .footer p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  header span.movingIcon {
+    display: block;
+  }
+
+  header .bookIcon {
+    bottom: 50px;
+    left: 60px;
+  }
+
+  header .bookIcon img {
+    width: 60%;
+  }
+
+  #AboutUs .title h2,
+  #AboutUs .title p {
     width: 35%;
-    padding: 0;
   }
 
-  #AboutUs .content .sp-card:nth-of-type(1),
-  #AboutUs .content .sp-card:nth-of-type(3) {
-    transform: translateY(-10%);
+  #AboutUs .box:nth-of-type(1),
+  #AboutUs .box:nth-of-type(3) {
+    transform: translateY(-100px);
   }
 
-  #AboutUs .content .sp-card:nth-of-type(2) {
-    margin-top: 60px;
+  #AboutUs .box:nth-of-type(2) {
+    transform: translateY(15px);
   }
 
-  #AboutUs .content .sp-card:not(:last-child),
-  #AboutUs .head {
-    margin-bottom: 0px;
+  #OurStory .title p {
+    font-size: 16px;
+    padding-inline: 10px;
+  }
+
+  #OurStory .part2 .image.bottomImg img {
+    width: 65%;
+  }
+
+  #SpecialDish .part2 .title img.separator {
+    width: 20%;
+  }
+
+  #OurChefs .text h4 {
+    font-size: 25px;
+  }
+
+  #OurChefs .text span {
+    font-size: 14px;
   }
 }
 
 @media (min-width: 1181px) and (max-width: 1300px) {
-  header .slider .body h2 {
-    width: 50%;
-  }
 }
