@@ -508,10 +508,45 @@ header form .inputContainer textarea {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+#Menu .dishes .dishImg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(227, 197, 144, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+#Menu .dishes .dishItem:hover .dishImg::before {
+  opacity: 1;
 }
 
 #Menu .dishes .dishImg img {
   transform: scale(1.5);
+}
+
+#Menu .dishes .dishImg i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    z-index: 1;
+    opacity: 0;
+    font-size: 22px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+#Menu .dishes .dishItem:hover .dishImg i {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 1;
 }
 
 #Menu .dishes .lines {
@@ -698,4 +733,49 @@ header form .inputContainer textarea {
 #ContactUs .content form input::placeholder,
 #ContactUs .content form textarea::placeholder {
   color: var(--first-color);
+}
+
+.menuPopup[data-popup-name="menu"] .title img {
+  width: 20%;
+}
+
+.menuPopup[data-popup-name="menu"] h2 {
+  font-size: 40px;
+}
+.menuPopup[data-popup-name="menu"] .price {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    border: 1px solid var(--main-color);
+    border-right-color: transparent;
+    border-radius: 5px 0 0 5px;
+}
+
+.menuPopup span.movingIcon i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--main-color);
+  color: var(--main-color);
+  background-color: var(--second-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+.menuPopup span.movingIcon i::before {
+  transform: rotate(-45deg);
+}
+
+.menuPopup span i.next {
+  right: 20px;
+}
+.menuPopup span i.prev {
+  left: 20px;
 }

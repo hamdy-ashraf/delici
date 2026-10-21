@@ -127,7 +127,7 @@
       <div
         class="popup overflow-auto h-100"
         data-popup-name="book"
-        onclick="closePopup()"
+        onclick="closePopup('book')"
       >
         <div class="box my-4 px-5 rounded-3 secondColor">
           <div class="title row-gap-4">
@@ -150,7 +150,7 @@
               <br />
               <br />
               Booking request
-              <a class="mainColor text-decoration-none">+20-102-108-0042</a> or
+              <a class="mainColor sp-button text-decoration-none">+20-102-108-0042</a> or
               fill out the order form
             </div>
             <form>
@@ -191,7 +191,7 @@
               </div>
             </form>
           </div>
-          <i class="fa-regular fa-circle-xmark" onclick="closePopup()"></i>
+          <i class="fa-regular fa-circle-xmark" onclick="closePopup('book')"></i>
         </div>
       </div>
     </header>
@@ -232,7 +232,7 @@
             </div>
             <div class="text text-center mt-3">
               <h4 class="text-light h2">Breakfast</h4>
-              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+              <a href="" class="mainColor sp-button text-decoration-none">VIEW MENU</a>
             </div>
           </div>
           <div class="col-lg-4 box">
@@ -251,7 +251,7 @@
             </div>
             <div class="text text-center mt-3">
               <h4 class="text-light h2">Dinner</h4>
-              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+              <a href="" class="mainColor sp-button text-decoration-none">VIEW MENU</a>
             </div>
           </div>
           <div class="col-lg-4 box">
@@ -270,7 +270,7 @@
             </div>
             <div class="text text-center mt-3">
               <h4 class="text-light h2">Drinks</h4>
-              <a href="" class="mainColor text-decoration-none">VIEW MENU</a>
+              <a href="" class="mainColor sp-button text-decoration-none">VIEW MENU</a>
             </div>
           </div>
         </div>
@@ -316,7 +316,7 @@
                 </div>
                 <div class="text text-center mb-4">
                   <h6 class="fw-bold text-light h5">Book Through Call</h6>
-                  <a href="" class="mainColor text-decoration-none"
+                  <a href="" class="mainColor sp-button text-decoration-none"
                     >+20-102-108-0042</a
                   >
                 </div>
@@ -426,6 +426,7 @@
       </div>
     </section>
 
+    <!-- Menu Section -->
     <section id="Menu" class="secondBg">
       <div class="container">
         <div class="title row-gap-4">
@@ -440,837 +441,102 @@
         <div class="navBar mb-5">
           <ul class="list-unstyled d-flex column-gap-4">
             <li>
-              <a href="#" class="active" data-dish-name="breakFast"
+              <a href="#" class="active sp-button" data-dish-name="breakFast"
                 >BreakFast</a
               >
             </li>
             <div class="minBox">
               <span></span>
             </div>
-            <li><a href="#" data-dish-name="lunch">Lunch</a></li>
+            <li><a class="sp-button" href="#" data-dish-name="lunch">Lunch</a></li>
             <div class="minBox">
               <span></span>
             </div>
-            <li><a href="#" data-dish-name="dinner">Dinner</a></li>
+            <li><a class="sp-button" href="#" data-dish-name="dinner">Dinner</a></li>
             <div class="minBox">
               <span></span>
             </div>
-            <li><a href="#" data-dish-name="drinks">Drinks</a></li>
+            <li><a class="sp-button" href="#" data-dish-name="drinks">Drinks</a></li>
           </ul>
         </div>
         <div class="dishes">
           <div class="row dishContent active show" data-dish-name="breakFast">
             <div class="col-lg-6 part1">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
             <div class="col-lg-6 part2">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
           </div>
           <div class="row dishContent" data-dish-name="lunch">
             <div class="col-lg-6 part1">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
             <div class="col-lg-6 part2">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
           </div>
           <div class="row dishContent" data-dish-name="dinner">
             <div class="col-lg-6 part1">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
             <div class="col-lg-6 part2">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
           </div>
           <div class="row dishContent" data-dish-name="drinks">
             <div class="col-lg-6 part1">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-9 d-flex flex-column justify-content-center">
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
             <div class="col-lg-6 part2">
-              <div class="item d-flex flex-column row-gap-5">
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="row px-4 dishItem">
-                  <div class="col-3">
-                    <div class="item">
-                      <div class="dishImg">
-                        <img
-                          src="./delici_images/BF-1.webp"
-                          class="img-fluid"
-                          alt=""
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="col-9 d-flex flex-column justify-content-center"
-                  >
-                    <div class="item">
-                      <div class="name d-flex column-gap-lg-3 mb-3">
-                        <h5 class="mainColor mb-0">Everyday Pancakes</h5>
-                        <div
-                          class="lines d-flex justify-content-center flex-grow-1 flex-column"
-                        >
-                          <span class="line"></span>
-                          <span class="line"></span>
-                        </div>
-                        <span class="price mainColor">$35.92</span>
-                      </div>
-                      <p class="details firstColor">
-                        Fluffy buttermilk pancakes stacked high and griddled to
-                        a perfect...
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="item d-flex flex-column row-gap-5"></div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
+
+    <!-- Menu Popup -->
+    <div
+      class="menuPopup popup w-100 h-100 p-0 overflow-auto"
+      data-popup-name="menu"
+      onclick="closePopup('menu')"
+    >
+      <div class="box my-4 px-4 rounded-3 secondColor">
+        <div class="title row-gap-4">
+          <div class="head text-center">
+            <h6 class="mainColor mb-2">RESERVATION</h6>
+            <img src="./delici_images/separator.svg" class="" alt="" />
+          </div>
+          <div class="body text-center text-light my-4">
+            <h2>Book A Table</h2>
+          </div>
+        </div>
+        <div class="memuImg rounded-3 overflow-hidden position-relative">
+          <img src="./delici_images/BF-1.webp" class="img-fluid" alt="" />
+          <div class="price secondBg px-3 py-2">
+            <span class="text-light">$35.54</span>
+          </div>
+          <span class="movingIcon" onclick="nextSilder()"
+            ><i class="fa-solid fa-chevron-right next"></i
+          ></span>
+          <span class="movingIcon" onclick="prevSlider()"
+            ><i class="fa-solid fa-chevron-left prev"></i
+          ></span>
+        </div>
+        <p class="firstColor mt-4">
+          Thick-cut slices of buttery brioche soaked overnight in a sweet
+          cinnamon and vanilla egg batter, allowing every slice to fully absorb
+          the custardy mixture before it hits the pan. Pan-fried in butter until
+          golden and beautifully caramelized on both sides, the result is a
+          crisp exterior giving way to a soft, custard-like center. Finished
+          with a generous dusting of powdered sugar, a pat of soft butter and a
+          warm pour of syrup, with a handful of fresh berries served alongside
+          for a bright, classic touch that balances the richness.
+        </p>
+        <i class="fa-regular fa-circle-xmark" onclick="closePopup('menu')"></i>
+      </div>
+    </div>
 
     <!-- Our Chefs Section -->
     <section id="OurChefs">
@@ -1296,22 +562,22 @@
                 <div class="media position-absolute z-1 top-50 start-50">
                   <ul class="list-unstyled d-flex column-gap-3">
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-facebook-f"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-x-twitter"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-instagram"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-linkedin-in"></i
                       ></a>
                     </li>
@@ -1340,22 +606,22 @@
                 <div class="media position-absolute z-1 top-50 start-50">
                   <ul class="list-unstyled d-flex column-gap-3">
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-facebook-f"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-x-twitter"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-instagram"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-linkedin-in"></i
                       ></a>
                     </li>
@@ -1383,22 +649,22 @@
                 <div class="media position-absolute z-1 top-50 start-50">
                   <ul class="list-unstyled d-flex column-gap-3">
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-facebook-f"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-x-twitter"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a href="#" class="sp-button">
                         <i class="fa-brands fa-instagram"></i
                       ></a>
                     </li>
                     <li>
-                      <a href="#" class="">
+                      <a class="sp-button" href="#" class="">
                         <i class="fa-brands fa-linkedin-in"></i
                       ></a>
                     </li>

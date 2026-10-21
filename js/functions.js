@@ -22,8 +22,8 @@ function openPopup(popupName) {
   }, 1);
 }
 
-function closePopup() {
-  let popup = document.querySelector(`.popup`);
+function closePopup(popupName) {
+  let popup = document.querySelector(`.popup[data-popup-name=${popupName}]`);
   popup.classList.remove("show");
   setTimeout(function () {
     popup.classList.remove("active");
@@ -44,4 +44,44 @@ function moveTHroughDishes(dish) {
   setTimeout(function () {
     dishName.classList.add("show");
   }, 1);
+}
+
+function showData(type, push, dish) {
+  let dishName = document.querySelector(
+    `.dishContent[data-dish-name=${type}] .${push} .item`,
+  );
+
+  dishName.innerHTML += `
+  <div class="row px-4 dishItem">
+    <div class="col-3">
+        <div class="item">
+            <div class="dishImg">
+                <img
+                    src="./delici_images/${dish.images}"
+                    class="img-fluid"
+                    alt=""
+                />
+                <i class="fa-regular fa-square-plus" onclick="openPopup('menu')"></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-9 d-flex flex-column justify-content-center">
+        <div class="item">
+            <div class="name d-flex column-gap-lg-3 mb-3">
+                <h5 class="mainColor mb-0">${dish.name}</h5>
+                <div
+                    class="lines d-flex justify-content-center flex-grow-1 flex-column"
+                >
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </div>
+                <span class="price mainColor">${dish.price}</span>
+            </div>
+            <p class="details firstColor">
+            ${dish.miniDescription}
+            </p>
+        </div>
+    </div>
+  </div>
+  `;
 }
