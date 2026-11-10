@@ -6,8 +6,10 @@ let nextBtn = document.querySelector("i.next"),
   dishesContainer = document.querySelector(".dishes"),
   dishItem1 = dishesContainer.querySelector(".part1"),
   dishItem2 = dishesContainer.querySelector(".part2"),
-  menuPopupBox = document.querySelector(".menuPopup .box");
-//   console.log(popupKeys)
+  menuPopupBox = document.querySelector(".menuPopup .box"),
+  currentDishIndex = 0;
+//   prevPopupBtn = document.querySelector(".menuPopup i.prev");
+//   console.log(nextPopupBtn)
 
 popupBoxs.forEach(function (popupBox) {
   popupBox.addEventListener("click", function (e) {
@@ -26,35 +28,20 @@ menuLis.forEach(function (anchor) {
   });
 });
 
-BreakFast.slice(0, 3).forEach(function (dish) {
-  showData("breakFast", "part1", dish);
-});
+let counters = {
+  BreakFast: 0,
+  Lunch: 0,
+  Dinner: 0,
+  Drinks: 0,
+};
 
-BreakFast.slice(3).forEach(function (dish) {
-  showData("breakFast", "part2", dish);
+allMenu.forEach(function (dish) {
+  let dishesKeys = Object.keys(counters);
+  dishesKeys.forEach(function (key) {
+    if (dish.type == key) {
+      let i = counters[key] < 3 ? 1 : 2;
+      showData(key, `part${i}`, dish, counters[key]);
+      counters[key]++;
+    }
+  });
 });
-
-Lunch.slice(0, 3).forEach(function (dish) {
-  showData("lunch", "part1", dish);
-});
-
-Lunch.slice(3).forEach(function (dish) {
-  showData("lunch", "part2", dish);
-});
-
-Dinner.slice(0, 3).forEach(function (dish) {
-  showData("dinner", "part1", dish);
-});
-
-Dinner.slice(3).forEach(function (dish) {
-  showData("dinner", "part2", dish);
-});
-
-Drinks.slice(0, 3).forEach(function (dish) {
-  showData("drinks", "part1", dish);
-});
-
-Drinks.slice(3).forEach(function (dish) {
-  showData("drinks", "part2", dish);
-});
-

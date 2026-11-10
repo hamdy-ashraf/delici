@@ -46,7 +46,7 @@ function moveTHroughDishes(dish) {
   }, 1);
 }
 
-function showData(type, push, dish) {
+function showData(type, push, dish, index) {
   let dishName = document.querySelector(
     `.dishContent[data-dish-name=${type}] .${push} .item`,
   );
@@ -61,7 +61,7 @@ function showData(type, push, dish) {
                     class="img-fluid"
                     alt=""
                 />
-                <i class="fa-regular fa-square-plus" onclick="openPopup('menu')"></i>
+                <i class="fa-regular fa-square-plus" onclick="openPopup('menu'), showPopup(${type}, ${index})"></i>
             </div>
         </div>
     </div>
@@ -84,4 +84,46 @@ function showData(type, push, dish) {
     </div>
   </div>
   `;
+}
+
+function popupContent(itemObject, index, dishObject) {
+  menuPopupBox.innerHTML = `
+  <div class="title row-gap-4">
+          <div class="head text-center">
+            <h6 class="mainColor mb-2">RESERVATION</h6>
+            <img src="./delici_images/separator.svg" class="" alt="" />
+          </div>
+          <div class="body text-center text-light my-4">
+            <h2>${itemObject.name}</h2>
+          </div>
+        </div>
+        <div class="memuImg rounded-3 overflow-hidden position-relative">
+          <img src="./delici_images/${itemObject.images}" class="img-fluid" alt="" />
+          <div class="price secondBg px-3 py-2">
+            <span class="text-light">${itemObject.price}</span>
+          </div>
+          <span class="movingIcon"
+            ><i class="fa-solid fa-chevron-right next" onclick="moveDishes(${dishObject.type}, ${++index})"></i
+          ></span>
+          <span class="movingIcon"
+            ><i class="fa-solid fa-chevron-left prev" onclick="moveDishes(${dishObject.type}, ${(index = index - 2)})"></i
+          ></span>
+        </div>
+        <p class="firstColor mt-4">
+          ${itemObject.description}
+        </p>
+        <i class="fa-regular fa-circle-xmark" onclick="closePopup('menu')"></i>
+  `;
+}
+
+function showPopup(type, index) {
+  let dishdata = type[index];
+
+  popupContent(dishdata, index, dishdata);
+}
+
+function moveDishes(type, index) {
+  let dishdata = type[index];
+  console.log(index);
+  popupContent(dishdata, index, dishdata);
 }
