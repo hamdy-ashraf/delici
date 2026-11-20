@@ -15,7 +15,9 @@ function prevSlider() {
 }
 
 function openPopup(popupName) {
-  let popup = document.querySelector(`.popup[data-popup-name=${popupName}]`);
+  let popup = document.querySelector(`.popup[data-popup-name=${popupName}]`),
+    bodyScroll = document.querySelector("body");
+  bodyScroll.classList.add("overflow-y-hidden");
   popup.classList.add("active");
   setTimeout(function () {
     popup.classList.add("show");
@@ -24,10 +26,35 @@ function openPopup(popupName) {
 
 function closePopup(popupName) {
   let popup = document.querySelector(`.popup[data-popup-name=${popupName}]`);
+    bodyScroll = document.querySelector("body");
+  bodyScroll.classList.remove("overflow-y-hidden");
   popup.classList.remove("show");
   setTimeout(function () {
     popup.classList.remove("active");
   }, 1000);
+}
+
+function addBgToNav() {
+  if (window.scrollY > 30) {
+    navEle.classList.add("addBg");
+  } else {
+    navEle.classList.remove("addBg");
+  }
+}
+
+function moveActiveByScroll() {
+  sections.forEach(function (section) {
+    let topOfSection = section.offsetTop,
+      bottomOfSection = topOfSection + section.clientHeight,
+      sectionId = section.getAttribute("id"),
+      currentLink = navEle.querySelector(".outNav .nav-link.active"),
+      aboutLink = navEle.querySelector(`.outNav .nav-link[href='#${sectionId}']`);
+
+    if (window.scrollY > topOfSection && window.scrollY < bottomOfSection) {
+        currentLink.classList.remove("active");
+        aboutLink.classList.add("active");
+    }
+  });
 }
 
 function moveTHroughDishes(dish) {
@@ -87,6 +114,7 @@ function showData(type, push, dish, index) {
 }
 
 function popupContent(itemObject, index, dishObject) {
+    console.log(index);
   menuPopupBox.innerHTML = `
   <div class="title row-gap-4">
           <div class="head text-center">
@@ -103,10 +131,10 @@ function popupContent(itemObject, index, dishObject) {
             <span class="text-light">${itemObject.price}</span>
           </div>
           <span class="movingIcon"
-            ><i class="fa-solid fa-chevron-right next" onclick="moveDishes(${dishObject.type}, ${++index})"></i
+            ><i class="fa-solid fa-chevron-right next" onclick="moveDishes(${dishObject.type}, ${index < 5 ? index + 1 : index - 5})"></i
           ></span>
           <span class="movingIcon"
-            ><i class="fa-solid fa-chevron-left prev" onclick="moveDishes(${dishObject.type}, ${(index = index - 2)})"></i
+            ><i class="fa-solid fa-chevron-left prev" onclick="moveDishes(${dishObject.type}, ${index > 0 ? index - 1 : index + 5})"></i
           ></span>
         </div>
         <p class="firstColor mt-4">
@@ -124,6 +152,5 @@ function showPopup(type, index) {
 
 function moveDishes(type, index) {
   let dishdata = type[index];
-  console.log(index);
   popupContent(dishdata, index, dishdata);
 }

@@ -1,3 +1,168 @@
+.navbar {
+  transition-duration: 0.5s;
+}
+
+.navbar.scrolled {
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.navbar.addBg {
+  background-color: #202020;
+}
+
+.nav-link.sp-link.active {
+  color: var(--main-color);
+}
+
+.nav-link.sp-link.active::before,
+.nav-link.sp-link.active::after {
+  transform: scaleX(1);
+}
+
+.nav-link.sp-link {
+  transition: all;
+}
+
+.navbar .outNav {
+  display: flex;
+  column-gap: 20px;
+}
+
+.nav-link.sp-link {
+  color: #fff;
+  position: relative;
+  transition-duration: 0.5s;
+}
+
+.nav-link.sp-link::before,
+.nav-link.sp-link::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  color: var(--main-color);
+  background-color: var(--main-color);
+  transition-duration: 0.5s;
+}
+
+.nav-link.sp-link:hover::before,
+.nav-link.sp-link:hover::after {
+  transform: scaleX(1);
+}
+
+.nav-link.sp-link::before {
+  top: 90%;
+}
+
+.nav-link.sp-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .navbar-toggler {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  transform: translate(0, 0);
+  position: relative;
+}
+
+.navbar-toggler {
+  transition: all;
+  width: 40px;
+}
+
+.navbar .navbar-toggler span {
+  height: 2px;
+  width: 30px;
+  background-color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .offcanvas {
+    transition: all;
+  }
+}
+
+.offcanvas.offcanvas-end {
+  left: 0;
+  transition-duration: 0.3s;
+  transform: translateX(-100%);
+  transition-timing-function: linear;
+  background-image: url("../delici_images/bg-7b557670.png");
+  background-color: #0e0d0c;
+}
+
+.offcanvas-backdrop {
+  background-color: rgba(228, 197, 144, 0.5);
+}
+
+.navbar i.sideBarExit {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  --bs-btn-close-color: var(--main-color);
+  cursor: pointer;
+}
+
+.offcanvas {
+  color: var(--main-color);
+}
+
+.navbar .insideNav .nav-item .nav-link {
+  border-block: 1px solid #777;
+  color: #fff;
+  transition-duration: 0.5s;
+}
+
+.navbar .insideNav .nav-item .nav-link.active {
+  color: var(--main-color);
+}
+
+.navbar .insideNav .nav-item .nav-link:hover {
+  color: var(--main-color);
+}
+
+.navbar .text p {
+  color: #777;
+}
+
+.navbar .booking a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navbar .booking a::before,
+.navbar .booking a::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  transform: scaleX(0);
+  color: var(--main-color);
+  background-color: var(--main-color);
+  transition-duration: 0.5s;
+}
+
+.navbar .booking a:hover::before,
+.navbar .booking a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .booking a::before {
+  top: 90%;
+}
+
+.navbar .booking a:hover {
+  color: var(--main-color);
+}
+
 header .content .slider {
   position: absolute;
   top: 0;

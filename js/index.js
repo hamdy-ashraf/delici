@@ -6,10 +6,16 @@ let nextBtn = document.querySelector("i.next"),
   dishesContainer = document.querySelector(".dishes"),
   dishItem1 = dishesContainer.querySelector(".part1"),
   dishItem2 = dishesContainer.querySelector(".part2"),
+  navEle = document.querySelector(".navbar"),
   menuPopupBox = document.querySelector(".menuPopup .box"),
+  sections = document.querySelectorAll("header, section"),
   currentDishIndex = 0;
 //   prevPopupBtn = document.querySelector(".menuPopup i.prev");
 //   console.log(nextPopupBtn)
+
+moveActiveByScroll();
+
+addBgToNav();
 
 popupBoxs.forEach(function (popupBox) {
   popupBox.addEventListener("click", function (e) {
@@ -26,6 +32,23 @@ menuLis.forEach(function (anchor) {
 
     moveTHroughDishes(anchor);
   });
+});
+
+let lastScroll = window.scrollY;
+window.addEventListener("scroll", function () {
+  let currentScroll = window.scrollY;
+
+  if (currentScroll > lastScroll) {
+    navEle.classList.add("scrolled");
+  } else if (currentScroll < lastScroll) {
+    navEle.classList.remove("scrolled");
+  }
+
+  addBgToNav();
+
+  lastScroll = currentScroll;
+
+  moveActiveByScroll();
 });
 
 let counters = {

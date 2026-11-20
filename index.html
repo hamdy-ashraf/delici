@@ -12,9 +12,123 @@
     <link rel="stylesheet" href="./css/index.css" />
     <link rel="stylesheet" href="./css/index.responsive.css" />
   </head>
-  <body style="height: 5000px">
+  <body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./delici_images/logo.png" class="img-fluid" alt=""
+        /></a>
+        <ul class="list-unstyled mt-4 outNav">
+          <li class="nav-item">
+            <a class="nav-link sp-link active" aria-current="page" href="#Home"
+              >Home</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#AboutUs">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#OurStory">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#SpecialDish">Special Dish</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#Menu">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#OurChefs">Our Chefs</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link sp-link" href="#ContactUs">Contact Us</a>
+          </li>
+        </ul>
+        <button
+          class="navbar-toggler overflow-hidden"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-end overflow-auto"
+          tabindex="-1"
+          id="offcanvasNavbar"
+          aria-labelledby="offcanvasNavbarLabel"
+        >
+          <div class="offcanvas-header flex-column row-gap-4">
+            <div class="logoSideBar">
+              <img src="./delici_images/logo.png" class="img-fluid" alt="" />
+            </div>
+            <div class="imgSideBar rounded-circle overflow-hidden">
+              <img
+                src="./delici_images/sidebar-image.jpg"
+                class="img-fluid"
+                alt=""
+              />
+            </div>
+            <i
+              class="fa-regular fa-circle-xmark sideBarExit"
+              data-bs-dismiss="offcanvas"
+            ></i>
+            <ul
+              class="navbar-nav justify-content-end flex-grow-1 pe-3 insideNav w-50 m-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#Home"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#AboutUs">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#OurStory">Our Story</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#SpecialDish">Special Dish</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Menu">Menu</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#OurChefs">Our Chefs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#ContactUs">Contact Us</a>
+              </li>
+            </ul>
+            <div class="text text-center mt-4">
+              <h3>Visit Us</h3>
+              <p>
+                <i class="fa-solid fa-location-dot"></i> Delicious City, London
+                9578, UK
+              </p>
+              <p>
+                <i class="fa-regular fa-clock"></i> Daily : 8.00 am to 10.00 pm
+              </p>
+              <p class="mb-0">
+                <i class="fa-regular fa-envelope"></i> booking@restaurant.com
+              </p>
+            </div>
+            <span class="miniBox"></span>
+            <div class="booking text-center d-flex flex-column row-gap-3">
+              <h6>Booking Request</h6>
+              <a href="" class="fs-3 mb-4">+20-102-108-0042</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
     <!-- Header Page -->
-    <header class="position-relative vh-100 overflow-hidden">
+    <header class="position-relative vh-100 overflow-hidden" id="Home">
       <!-- Sliders -->
       <div class="content">
         <!-- First Slider -->
